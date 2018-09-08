@@ -1,0 +1,65 @@
+Tugas Nomor 1
+
+Pseudocode :
+STORE "massa benda" with 600
+STORE "percepatan benda" with 2
+STORE "resultan gaya" without any value
+  CALCULATE "massa benda" times "percepatan benda"
+SET "resultan gaya" with calculation result
+
+  DISPLAY "resultan gaya"
+
+
+
+Tugas Nomor 2
+Algoritma :
+1. Simpan "tahun" dengan nilai berapapun
+2. Jika "tahun" habis di bagi 4 sehingga modulus nilai 0 dan "tahun" tidak habis di bagi 100 sehingga modulus nilai 1. Jika "tahun" habis di bagi 4 sehingga modulus nilai 0, "tahun" habis di bagi 100 sehingga modulus nilai 0 dan "tahun" habis di bagi 400 sehingga modulus nilai 0
+
+Pseudocode :
+IF "tahun" mod 4 equal to 0 THEN
+    IF "tahun" mod 100 equal not equal to 0
+    ELSE IF "tahun" mod 4 equal to 0 THEN
+    ELSE IF "tahun" mod 100 equal to 0 THEN
+    ELSE IF "tahun" mod 400 equal 0
+       DISPLAY "tahun kabisat" 
+    ELSE
+       DISPLAY "bukan tahun kabisat"
+
+
+
+Tugas Nomor 3
+Algoritma :
+1. Simpan nilai 'jumlah pakaian' dengan nilai 0.
+2. Ulangi step 3 selama 'jumlah pakaian' masih di bawah 20. Jika 'jumlah pakaian' sudah 20, lanjut ke step 4.
+3. Tambah 'jumlah pakaian' dengan 1, agar semakin mendekati batas perulangan. Kembali ke step 2.
+4. Tampilkan 'mesin cuci dinyalakan', berarti sudah mencukupi
+
+
+Pseudocode :
+STORE "jumlah pakaian" with 0
+
+WHILE "jumlah pakaian" < 20
+  ADD "jumlah pakaian" by 1
+
+DISPLAY "mesin cuci dinyalakan"
+
+
+
+Tugas Nomor 4
+Algoritma :
+1. Simpan nilai "kuku" dengan 0
+2. Ulangi step 3 sampai 'kuku' mencapai < 40. Jika 'kuku' telah mencapai 40 lanjut ke step 4
+3. Tambah 'kuku' dengan nilai 1, agar semakin dekat dengan perulangan. kembali ke step 2
+4. Apabila 'kuku' mod 2 sama dengan 0, berarti mendapat pujian dari guru
+5. Apabila 'kuku' mod 2 tidak sama dengan 0, berarti mendapat hukuman dari guru
+
+Pseudocode :
+STORE "kuku" with 0
+WHILE "kuku" < 40
+   ADD "kuku" by 1
+IF mod 2 equal to 0
+   DISPLAY "mendapat pujian dari guru"
+ELSE
+   DISPLAY "mendapat hukuman dari guru"
+
