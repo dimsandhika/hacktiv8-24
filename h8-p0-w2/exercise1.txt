@@ -15,7 +15,8 @@ Tugas Nomor 2
 Algoritma :
 1. Simpan "tahun" dengan nilai berapapun
 2. Jika "tahun" habis di bagi 4 sehingga modulus nilai 0 dan "tahun" tidak habis di bagi 100 sehingga modulus nilai 1. Jika "tahun" habis di bagi 4 sehingga modulus nilai 0, "tahun" habis di bagi 100 sehingga modulus nilai 0 dan "tahun" habis di bagi 400 sehingga modulus nilai 0
-
+3. Tampilkan 'tahun kabisat' apabila modulus 0
+4. Tampilkan 'bukan tabun kabisat' apabila modulus nilai 1
 Pseudocode :
 IF "tahun" mod 4 equal to 0 THEN
     IF "tahun" mod 100 equal not equal to 0
