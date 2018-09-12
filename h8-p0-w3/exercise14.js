@@ -7,12 +7,12 @@ function mengelompokkanAngka(arr) {
     }
 
     for (var b = 0; b < arr.length; b++) { 
-        if(arr[b] % 2 === 0) {
-            hasil[0].push(arr[b])
-        } else if(arr[b] % 3 === 0) {
+        if(arr[b] % 3 === 0) {
+        hasil[2].push(arr[b])
+        } else if(arr[b] % 2 !== 0) {
             hasil[1].push(arr[b])
-        } else {
-            hasil[2].push(arr[b])
+        } else if(arr[b] % 2 ===0) {
+            hasil[0].push(arr[b])
         }
     }
     return hasil
