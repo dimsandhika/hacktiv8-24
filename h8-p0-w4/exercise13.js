@@ -1,17 +1,66 @@
 function countProfit(shoppers) {
-  let listBarang = [ ['Sepatu Stacattu', 1500000, 10],
-                     ['Baju Zoro', 500000, 2],
-                     ['Sweater Uniklooh', 175000, 1]
-                   ];
+  let listBarang = [['Sepatu Stacattu', 1500000, 10],
+  ['Baju Zoro', 500000, 2],
+  ['Sweater Uniklooh', 175000, 1]
+  ];
 
-var arrBaru = []
+  var arrBaru = []
 
-var stokSepatu = listBarang[0][2]
-var stockBaju = listBarang
+  var stockStacattu = listBarang[0][2]
+  var stockZoro = listBarang[1][2]
+  var stockUniklooh = listBarang[2][2]
+
+  var pembeliStacattu = []
+  var pembeliZoro = []
+  var pembeliUniklooh = []
+
+  for (var i = 0; i < shoppers.length; i++) {
+    if (shoppers[i].product === 'Sepatu Stacattu') {
+      if (stockStacattu >= shoppers[i].amount) {
+        pembeliStacattu.push(shoppers[i].name)
+        stockStacattu -= shoppers[i].amount
+      } else if (shoppers[i].product === 'Baju Zoro')
+        if (stockZoro >= shoppers[i].amount) {
+          pembeliZoro.push(shoppers[i].name)
+          stockZoro -= shoppers[i].amount
+        } else if (shoppers[i].product === 'Sweater Uniklooh') {
+          if (stockUniklooh >= shoppers[i].amount) {
+            pembeliUniklooh.push(shoppers[i].name)
+            stockUnikloh -= shoppers[i].amount
+          }
+        }
+    }
+  }
+  var pembeli;
+  var sisa
+
+  for (var j = 0; j < listBarang.length; j++) {
+    if (listBarang[j][0] === 'Sepatu Stacattu') {
+      pembeli = pembeliStacattu
+      sisa = stockStacattu
+      totProfit = (listBarang[j][2] - stockStacattu) * listBarang[j][1]
+    } else if (listBarang[j][0] === 'Baju Zoro') {
+      pembeli = pembeliZoro
+      sisa = stockZoro
+      totProfit = (listBarang[j][2] - stockZoro) * listBarang[j][1]
+    } else if (listBarang[j][0] === 'Sweater Uniklooh') {
+      pembeli = pembeliUniklooh
+      sisa = stockUniklooh
+      totProfit = (listBarang[j][2] - stockUniklooh) * listBarang[j][1]
+    }
+    var objProduk = {}
+    objProduk.product = listBarang[j][0]
+    objProduk.shoppers = pembeli
+    objProduk.leftOver = sisa
+    objProduk.totalProfit = totProfit
+    arrBaru.push(objProduk)
+
+  }
+  return arrBaru
 }
 
 // TEST CASES
-console.log(countProfit([{name: 'Windi', product: 'Sepatu Stacattu', amount: 2}, {name: 'Vanessa', product: 'Sepatu Stacattu', amount: 3}, {name: 'Rani', product: 'Sweater Uniklooh', amount: 2}]));
+console.log(countProfit([{ name: 'Windi', product: 'Sepatu Stacattu', amount: 2 }, { name: 'Vanessa', product: 'Sepatu Stacattu', amount: 3 }, { name: 'Rani', product: 'Sweater Uniklooh', amount: 2 }]));
 //[ { product: 'Sepatu Stacattu',
 //   shoppers: [ 'Windi', 'Vanessa' ],
 //   leftOver: 5,
@@ -25,7 +74,7 @@ console.log(countProfit([{name: 'Windi', product: 'Sepatu Stacattu', amount: 2},
 //   leftOver: 1,
 //   totalProfit: 0 } ]
 
-console.log(countProfit([{name: 'Windi', product: 'Sepatu Stacattu', amount: 8}, {name: 'Vanessa', product: 'Sepatu Stacattu', amount: 10}, {name: 'Rani', product: 'Sweater Uniklooh', amount: 1}, {name: 'Devi', product: 'Baju Zoro', amount: 1}, {name: 'Lisa', product: 'Baju Zoro', amount: 1}]));
+console.log(countProfit([{ name: 'Windi', product: 'Sepatu Stacattu', amount: 8 }, { name: 'Vanessa', product: 'Sepatu Stacattu', amount: 10 }, { name: 'Rani', product: 'Sweater Uniklooh', amount: 1 }, { name: 'Devi', product: 'Baju Zoro', amount: 1 }, { name: 'Lisa', product: 'Baju Zoro', amount: 1 }]));
 // [ { product: 'Sepatu Stacattu',
 //     shoppers: [ 'Windi' ],
 //     leftOver: 2,
@@ -38,7 +87,7 @@ console.log(countProfit([{name: 'Windi', product: 'Sepatu Stacattu', amount: 8},
 //     shoppers: [ 'Rani' ],
 //     leftOver: 0,
 //     totalProfit: 175000 } ]
-console.log(countProfit([{name: 'Windi', product: 'Sepatu Naiki', amount: 5}]));
+console.log(countProfit([{ name: 'Windi', product: 'Sepatu Naiki', amount: 5 }]));
 // [ { product: 'Sepatu Stacattu',
 //     shoppers: [],
 //     leftOver: 10,
