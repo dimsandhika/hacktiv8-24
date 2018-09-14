@@ -2,7 +2,6 @@ function perkalianUnik(arr) {
     var angkaBaru = [];
 
     for (var a = 0; a < arr.length; a++) {
-
         var angka = 1
         for (var j = 0; j < arr.length; j++) {
             if (j !== a) {

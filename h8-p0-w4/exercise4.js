@@ -8,7 +8,7 @@ function cariModus(arr) {
        angka++
        tampung = arr[a]
      } 
-     if (angka > 4) {
+     if (angka > tampung) {
        tampung = -1
      }
      if (angka === 0) {
