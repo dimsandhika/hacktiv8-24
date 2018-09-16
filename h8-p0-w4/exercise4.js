@@ -7,17 +7,17 @@ function cariModus(arr) {
      if (arr[a] === arr[b] && a !== b) {
        angka++
        tampung = arr[a]
-     } 
-     if (angka > tampung) {
-       tampung = -1
-     }
-     if (angka === 0) {
-       tampung = -1
-     }
+      } 
+      if (angka > tampung) {
+        tampung = -1
+      }
+      if (angka === 0) {
+        tampung = -1
+      }
+    }
    }
-  }
-  return tampung
-  }
+   return tampung
+   }
   
   // TEST CASES
   console.log(cariModus([10, 4, 5, 2, 4])); // 4
