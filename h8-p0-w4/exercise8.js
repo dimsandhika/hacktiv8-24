@@ -1,14 +1,10 @@
 function urutkanAbjad(str) {
-    var tampung = []
-    
-    for (var a = str.length-1; a >= 0; a--) {
-      tampung.push(str[a])
-      }
-      for (var b = 0; b < str.length; b++) {
-        tampung.sort()
-      }
-    return tampung
-    }
+  var strSplit = str.split('');
+  var strSort = strSplit.sort();
+  var strJoin = strSort.join('');
+  var strFinal = strJoin;
+  return strFinal;
+}
     
     // TEST CASES
     console.log(urutkanAbjad('hello')); // 'ehllo'

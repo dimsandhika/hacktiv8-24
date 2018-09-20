@@ -13,7 +13,7 @@ function changeMe(arr) {
         if (arr[a][3] === undefined) {
             myObj.age = 'Invalid Birth Year'
         } else {
-            myObj.age = 2018 - arr[a][3]
+            myObj.age = 2200 - arr[a][3]
     }
     console.log(no + '. ' + fullName + ':')    
     console.log(myObj)
